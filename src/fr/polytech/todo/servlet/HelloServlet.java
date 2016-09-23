@@ -29,6 +29,7 @@ public class HelloServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		/*
 		response.setContentType("text/html");
 		ServletOutputStream out = response.getOutputStream();
 		out.println("<html>");
@@ -39,6 +40,8 @@ public class HelloServlet extends HttpServlet {
 		out.println("<h1>Hello "+request.getParameter("name")+"</h1>");
 		out.println("</body>");
 		out.println("</html>");
+		*/
+		request.getRequestDispatcher("hello.jsp").forward(request, response);
 	}
 
 	/**
@@ -46,6 +49,7 @@ public class HelloServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		this.doGet(request, response);
 	}
 
 }

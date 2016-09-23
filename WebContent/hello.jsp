@@ -4,9 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Hello Page</title>
 </head>
 <body>
-
+	<h1>Hello <%= request.getParameter("name") %></h1>
+	<form method="POST">
+		Name : <br>
+		<input type="text" name="name"><br>
+		<input type="submit" value="OK">
+	</form>
 </body>
 </html>
